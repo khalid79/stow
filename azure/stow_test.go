@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/cheekybits/is"
-	"github.com/graymeta/stow"
-	"github.com/graymeta/stow/test"
+	"github.com/khalid79/stow"
+	"github.com/khalid79/stow/test"
 )
 
 var (

@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/graymeta/stow"
+	"github.com/khalid79/stow"
 )
 
 type container struct {

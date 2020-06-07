@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/graymeta/stow/local"
+	"github.com/khalid79/stow/local"
 )
 
 type item struct {

@@ -3,7 +3,7 @@ package stow_test
 import (
 	"net/url"
 
-	"github.com/graymeta/stow"
+	"github.com/khalid79/stow"
 )
 
 func init() {

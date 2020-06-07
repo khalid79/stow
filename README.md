@@ -1,7 +1,7 @@
 ![Stow logo](stow-aeroplane.png)
 ![Stow definition](stow-definition.png)
-[![GoDoc](https://godoc.org/github.com/graymeta/stow?status.svg)](https://godoc.org/github.com/graymeta/stow)
-[![Go Report Card](https://goreportcard.com/badge/github.com/graymeta/stow)](https://goreportcard.com/report/github.com/graymeta/stow)
+[![GoDoc](https://godoc.org/github.com/khalid79/stow?status.svg)](https://godoc.org/github.com/khalid79/stow)
+[![Go Report Card](https://goreportcard.com/badge/github.com/khalid79/stow)](https://goreportcard.com/report/github.com/khalid79/stow)
 
 Cloud storage abstraction package for Go.
 
@@ -76,9 +76,9 @@ Import Stow plus any of the implementation packages that you wish to provide. Fo
 
 ```go
 import (
-	"github.com/graymeta/stow"
-	_ "github.com/graymeta/stow/google"
-	_ "github.com/graymeta/stow/s3"
+	"github.com/khalid79/stow"
+	_ "github.com/khalid79/stow/google"
+	_ "github.com/khalid79/stow/s3"
 )
 ```
 

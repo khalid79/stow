@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/graymeta/stow"
+	"github.com/khalid79/stow"
 	storage "google.golang.org/api/storage/v1"
 )
 

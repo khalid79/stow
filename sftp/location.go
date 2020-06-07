@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/graymeta/stow"
+	"github.com/khalid79/stow"
 	"github.com/hashicorp/go-multierror"
 	"github.com/pkg/errors"
 	"github.com/pkg/sftp"

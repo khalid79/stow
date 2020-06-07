@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/cheekybits/is"
-	"github.com/graymeta/stow"
+	"github.com/khalid79/stow"
 )
 
 func TestChunkSize(t *testing.T) {

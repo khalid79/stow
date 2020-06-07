@@ -1,4 +1,4 @@
-module github.com/graymeta/stow
+module github.com/khalid79/stow
 
 require (
 	github.com/Azure/azure-sdk-for-go v32.5.0+incompatible
