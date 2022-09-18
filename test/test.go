@@ -95,16 +95,16 @@ func All(t *testing.T, kind string, config stow.Config) {
 	// Tests metadata retrieval on PUTs.
 	item1Content := "item one"
 	item1Name := "a_first/the item"
-	item1, skip1 := putItem(is, c1, item1Name, item1Content, md1, true)
+	item1, skip1 := putItem(is, c1, item1Name, item1Content, md1)
 	is.OK(item1)
 	if !skip1 {
 		is.NoErr(checkMetadata(t, is, item1, md1))
 	}
 
-	item2, _ := putItem(is, c1, "a_second/the item", "item two", nil, true)
+	item2, _ := putItem(is, c1, "a_second/the item", "item two", nil)
 	is.OK(item2)
 
-	item3, _ := putItem(is, c1, "the_third/the item", "item three", nil, false)
+	item3, _ := putItem(is, c1, "the_third/the item", "item three", nil)
 	is.OK(item3)
 
 	defer func() {
@@ -309,17 +309,13 @@ func createContainer(is is.I, location stow.Location, name string) stow.Containe
 	return container
 }
 
-func putItem(is is.I, container stow.Container, name, content string, md map[string]interface{}, knownSize bool) (stow.Item, bool) {
+func putItem(is is.I, container stow.Container, name, content string, md map[string]interface{}) (stow.Item, bool) {
 	var skipAssertion bool // skip metadata assertion
-	size := int64(len(content))
-	if !knownSize {
-		size = int64(-1)
-	}
-	item, err := container.Put(name, strings.NewReader(content), size, md)
+	item, err := container.Put(name, strings.NewReader(content), int64(len(content)), md)
 
 	// Metadata retrieval isn't supported
 	if stow.IsNotSupported(err) {
-		item, err = container.Put(name, strings.NewReader(content), size, nil)
+		item, err = container.Put(name, strings.NewReader(content), int64(len(content)), nil)
 		skipAssertion = true
 	}
 

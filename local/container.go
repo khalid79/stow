@@ -1,7 +1,9 @@
 package local
 
 import (
+	"context"
 	"errors"
+	"fmt"
 	"io"
 	"net/url"
 	"os"
@@ -29,6 +31,11 @@ func (c *container) URL() *url.URL {
 		Scheme: "file",
 		Path:   filepath.Clean(c.path),
 	}
+}
+
+func (c *container) PreSignRequest(_ context.Context, _ stow.ClientMethod, _ string,
+	_ stow.PresignRequestParams) (url string, err error) {
+	return "", fmt.Errorf("unsupported")
 }
 
 func (c *container) CreateItem(name string) (stow.Item, io.WriteCloser, error) {
@@ -71,7 +78,7 @@ func (c *container) Put(name string, r io.Reader, size int64, metadata map[strin
 	if err != nil {
 		return nil, err
 	}
-	if size >= 0 && n != size {
+	if n != size {
 		return nil, errors.New("bad size")
 	}
 	return item, nil
