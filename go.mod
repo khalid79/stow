@@ -13,7 +13,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/pkg/sftp v1.13.4
 	github.com/stretchr/testify v1.7.1
-	golang.org/x/crypto v0.0.0-20220511200225-c6db032c6c88
+	golang.org/x/crypto v0.0.0-20220427172511-eb4f295cb31f
 	golang.org/x/oauth2 v0.0.0-20220411215720-9780585627b5
 	google.golang.org/api v0.76.0
 	gopkg.in/kothar/go-backblaze.v0 v0.0.0-20210124194846-35409b867216
@@ -23,8 +23,8 @@ require (
 	cloud.google.com/go v0.101.0 // indirect
 	cloud.google.com/go/compute v1.6.1 // indirect
 	cloud.google.com/go/iam v0.3.0 // indirect
-	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.0.0 // indirect
-	github.com/Azure/azure-sdk-for-go/sdk/internal v1.0.0 // indirect
+	github.com/Azure/azure-sdk-for-go/sdk/azcore v0.23.1 // indirect
+	github.com/Azure/azure-sdk-for-go/sdk/internal v0.9.2 // indirect
 	github.com/Azure/go-autorest v14.2.0+incompatible // indirect
 	github.com/Azure/go-autorest/autorest v0.11.27 // indirect
 	github.com/Azure/go-autorest/autorest/adal v0.9.18 // indirect

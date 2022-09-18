@@ -2,9 +2,10 @@ package azure
 
 import (
 	"errors"
+	"github.com/Azure/azure-storage-blob-go/azblob"
 	"net/url"
 
-	az "github.com/Azure/azure-sdk-for-go/storage/azblob"
+	az "github.com/Azure/azure-sdk-for-go/storage"
 	"github.com/khalid79/stow"
 )
 
